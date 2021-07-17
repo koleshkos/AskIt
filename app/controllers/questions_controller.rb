@@ -3,7 +3,7 @@ class QuestionsController < ApplicationController
   
   def show
     @answer = @question.answers.build
-    @answers = @question.answers.order created_at: :desc 
+    @answers = @question.answers.order(created_at: :desc).page(params[:page])
     #@answers = Answer.where(question: @question).limit(2).order created_at: :desc # limit ограничивает количество выдаваемых ответов. в нашем случае 2 первых
   end
 
