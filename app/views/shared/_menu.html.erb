@@ -12,7 +12,7 @@
         <% if user_signed_in? %>
           <li class="nav col-12 col-lg-auto mb-2  mb-md-0"">
             <a class="nav-link px-2 text-white" href="#">
-              <%= current_user.name %>
+              <%= current_user.name_or_email %>
             </a>
           </li>
         <% else %>
